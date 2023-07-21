@@ -5,6 +5,7 @@
         <div class="col-md-12">
             <h1>Ingreso</h1>
             <a href="{{ route('moneyins.create') }}" class="btn btn-primary">New</a>
+
             <table class="table table-bordered mt-4">
                 <thead>
                     <tr>
@@ -12,7 +13,9 @@
                         <th>Amount</th>
                         <th>Category</th>
                         <th>Description</th>
+                        <th>Fecha</th>
                         <th>Action</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -22,6 +25,9 @@
                             <td>{{ $in->amount }}</td>
                             <td>{{ $in-> category->description }}</td>
                             <td>{{ $in->description }}</td>
+                            <td>{{ $in->date_in}}</td>
+
+
                             <td>
                                 <a href="{{ route('moneyins.edit', $in->id) }}" class="btn btn-warning">Edit</a>
                                 <form action="{{ route('moneyins.destroy', $in->id) }}" method="POST" style="display:inline;">
@@ -31,9 +37,11 @@
                                 </form>
                             </td>
                         </tr>
+
                     @endforeach
                 </tbody>
             </table>
+            <p>Total: </p> 123123
         </div>
     </div>
 </div>

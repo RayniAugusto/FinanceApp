@@ -12,6 +12,9 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <!-- link para la hora -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -42,6 +45,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/categories') }}"><ion-icon name="layers-outline"></ion-icon> Categorías</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/') }}"><ion-icon name="layers-outline"></ion-icon> Balance</a>
                             </li>
                         @endauth
                     </ul>

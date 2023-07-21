@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-12">
             <h1>Todas las categorias</h1>
-            <a href="{{ route('categories.create') }}" class="btn btn-primary">Crear nueva categoria</a>
+            <a href="{{ route('categories.create') }}" class="btn btn-primary">Nueva Categoria</a>
             <table class="table table-bordered mt-4">
                 <thead>
                     <tr>
