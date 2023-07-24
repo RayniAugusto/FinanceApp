@@ -38,7 +38,7 @@ class MoneyInController extends Controller
 
         ]);
         $moneyInData = $request->all();
-        $moneyInData['user_id'] = 1;
+        $moneyInData['user_id'] = auth()->user()->id;
 
         MoneyIn::create($moneyInData);
 

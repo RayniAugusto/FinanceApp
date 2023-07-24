@@ -7,11 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Balance extends Model
 {
-
-    // Modelo del balance
-    public function category()
-    {
-        return $this->belongsTo(Balance::class, '');
-    }
+    public $fillable=['date','tipo','description','amount'];
+    
 }
 

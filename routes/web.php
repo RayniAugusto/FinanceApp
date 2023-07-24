@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 //use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MoneyInController;
 use App\Http\Controllers\MoneyOutController;
+use App\Http\Controllers\BalanceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ Route::get('/', function () {
 Route::resource('categories', CategoryController::class);
 Route::resource('moneyins', MoneyInController::class);
 Route::resource('moneyouts', MoneyOutController::class);
+Route::resource('balance', BalanceController::class);
 
 
 Auth::routes();

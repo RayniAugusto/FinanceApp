@@ -12,7 +12,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+//        $categories = Category::all();
+//        return view('categories.index', compact('categories'));
+        $userId = auth()->user()->id; // Obtener el ID del usuario actualmente autenticado
+        $categories = Category::where('user_id', $userId)->get(); // Filtrar categorías por user_id
         return view('categories.index', compact('categories'));
     }
 
@@ -32,8 +35,9 @@ class CategoryController extends Controller
         $request->validate([
             'description' => 'required',
         ]);
-
-        Category::create($request->all());
+        $categoryData = $request->all();
+        $categoryData['user_id'] = auth()->user()->id;
+        Category::create($categoryData);
 
         return redirect()->route('categories.index')
                          ->with('success', 'Category created successfully.');
@@ -53,7 +57,7 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
         return view('categories.edit', compact('category'));
-    }   
+    }
 
     /**
      * Update the specified resource in storage.

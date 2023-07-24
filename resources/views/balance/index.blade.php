@@ -1,29 +1,31 @@
 @extends('layouts.app')
 @section('content')
-<!doctype html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Balance</title>
-</head>
-<body>
-    <h1>Hola soy el BALANCE</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Balance</h1>
+                <table class="table table-bordered mt-4">
+                    <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Tipo</th>
+                        <th>Descripcion</th>
+                        <th>Monto</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($balance as $item)
+                        <tr>
+                            <td>{{ $item['date'] }}</td>
+                            <td>{{ $item['tipo'] }}</td>
+                            <td>{{ $item['description'] }}</td>
+                            <td>{{ $item['amount'] }}</td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
 
-    <ul>
-        <li>
-            <h1>Ingresos</h1>
-        </li>
-    </ul>
-
-    <ul>
-        <li>
-            <h1>Egresos</h1>
-        </li>
-    </ul>
-</body>
-</html>
+            </div>
+        </div>
+    </div>
 @endsection
-

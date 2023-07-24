@@ -47,7 +47,7 @@
                                 <a class="nav-link" href="{{ url('/categories') }}"><ion-icon name="layers-outline"></ion-icon> Categorías</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/') }}"><ion-icon name="layers-outline"></ion-icon> Balance</a>
+                                <a class="nav-link" href="{{ url('/balance') }}"><ion-icon name="layers-outline"></ion-icon> Balance</a>
                             </li>
                         @endauth
                     </ul>

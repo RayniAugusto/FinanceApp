@@ -38,7 +38,7 @@ class MoneyOutController extends Controller
 
         ]);
         $moneyOutData = $request->all();
-        $moneyOutData['user_id'] = 1;
+        $moneyOutData['user_id'] = auth()->user()->id;
 
         MoneyOut::create($moneyOutData);
 
