@@ -23,7 +23,7 @@
                             <td>{{ $in->amount }}</td>
                             <td>{{ $in->category->description }}</td>
                             <td>{{ $in->description }}</td>
-                            <td>{{ $in->date_out}}</td>
+                            <td>{{ $in->created_at}}</td>
                             <td>
                                 <a href="{{ route('moneyouts.edit', $in->id) }}" class="btn btn-warning">Editar</a>
                                 <form action="{{ route('moneyouts.destroy', $in->id) }}" method="POST" style="display:inline;">

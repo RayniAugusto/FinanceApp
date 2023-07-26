@@ -16,15 +16,20 @@
                     <tbody>
                     @foreach($balance as $item)
                         <tr>
-                            <td>{{ $item['date'] }}</td>
-                            <td>{{ $item['tipo'] }}</td>
-                            <td>{{ $item['description'] }}</td>
-                            <td>{{ $item['amount'] }}</td>
+                            <td class="{{ $item['transaction_type'] == 'In' ? 'text-success' : 'text-danger' }}">{{ $item['created_at'] }}</td>
+                            <td class="{{ $item['transaction_type'] == 'In' ? 'text-success' : 'text-danger' }}">{{ $item['transaction_type'] }}</td>
+                            <td class="{{ $item['transaction_type'] == 'In' ? 'text-success' : 'text-danger' }}">{{ $item['description'] }}</td>
+                            <td class="{{ $item['transaction_type'] == 'In' ? 'text-success' : 'text-danger' }}">{{ $item['amount'] }}</td>
                         </tr>
                     @endforeach
                     </tbody>
                 </table>
 
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-2 text-right">
+                <h1>Total: {{ $total }}</h1>
             </div>
         </div>
     </div>
