@@ -13,7 +13,10 @@ class MoneyOutController extends Controller
      */
     public function index()
     {
-        $moneyouts = MoneyOut::all();
+//        $moneyouts = MoneyOut::all();
+//        return view('moneyouts.index', compact('moneyouts'));
+        $userId = auth()->user()->id; // Obtener el ID del usuario actualmente autenticado
+        $moneyouts = Moneyout::where('user_id', $userId)->get(); // Filtrar categorías por user_id
         return view('moneyouts.index', compact('moneyouts'));
     }
 

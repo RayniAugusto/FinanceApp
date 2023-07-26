@@ -21,7 +21,7 @@
                         <tr>
                             <td>{{ $in->id }}</td>
                             <td>{{ $in->amount }}</td>
-                            <td>{{ $in-> category->description }}</td>
+                            <td>{{ $in->category->description }}</td>
                             <td>{{ $in->description }}</td>
                             <td>{{ $in->date_out}}</td>
                             <td>

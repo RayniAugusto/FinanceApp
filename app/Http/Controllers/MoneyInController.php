@@ -13,7 +13,10 @@ class MoneyInController extends Controller
      */
     public function index()
     {
-        $moneyins = MoneyIn::all();
+//        $moneyins = MoneyIn::all();
+//        return view('moneyins.index', compact('moneyins'));
+        $userId = auth()->user()->id; // Obtener el ID del usuario actualmente autenticado
+        $moneyins = MoneyIn::where('user_id', $userId)->get(); // Filtrar categorías por user_id
         return view('moneyins.index', compact('moneyins'));
     }
 
