@@ -4,6 +4,13 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>Balance</h1>
+
+                <div class="row justify-content-end">
+                    <div class="col-2 text-right">
+                        <h1>Total: {{ $total }}</h1>
+                    </div>
+                </div>
+
                 <table class="table table-bordered mt-4">
                     <thead>
                     <tr>
@@ -27,10 +34,6 @@
 
             </div>
         </div>
-        <div class="row justify-content-end">
-            <div class="col-2 text-right">
-                <h1>Total: {{ $total }}</h1>
-            </div>
-        </div>
+
     </div>
 @endsection

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Egreso</h1>
+                <h1>Ingreso</h1>
                 <a href="{{ route('moneyins.create') }}" class="btn btn-primary">Nuevo egreso</a>
                 <table class="table table-bordered mt-4">
                     <thead>
